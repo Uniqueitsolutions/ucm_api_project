@@ -384,7 +384,7 @@
                     <!--end::Container-->
                 </div>
 
-                <div id="kt_content_container" class="container-xxl min-h-xxl-650px">
+                <div id="kt_content_container" class="container-xxl min-h-xxl-650px mb-5">
 
                     <form action="plumberaddedit.php" method="post" enctype="multipart/form-data">
                         <!-- main cards -->
@@ -413,6 +413,20 @@
                                                     </select>
                                                 </div>
                                             </div>
+                                            <div class="col-md-12 my-4">
+                                                <div>
+                                                    <label class=" required form-label fw-bolder font-weight-bolder  fs-4 "
+                                                        >How Often: </label>
+                                                    <select required id="often" class="form-select form-select "
+                                                        data-control="select2" data-placeholder="Select an option"
+                                                        name="often" required>
+                                                        <option value="">Select
+                                                        </option>
+                                                        <option value="1">One Time</option>
+                                                        <option value="2">Every Day</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                             <div class="col-md-6 my-4">
                                                 <div class="row">
                                                     <div class="col-md-12 mt-3">
@@ -423,8 +437,8 @@
                                                         <div>
                                                         
                                                             <select required id="cday" class="form-select form-select "
-                                                                data-control="select2" data-placeholder="Select an option"
-                                                                name="StateID" required>
+                                                                data-control="select2" disable data-placeholder="Select an option"
+                                                                name="coday" >
                                                                 <option value="">Select
                                                                 </option>
                                                             </select>
@@ -434,8 +448,8 @@
                                                         <div>
                                                         
                                                             <select required id="cmonth" class="form-select form-select "
-                                                            data-control="select2" data-placeholder="Select an option"
-                                                            name="StateID" required>
+                                                            data-control="select2" disable readonly data-placeholder="Select an option"
+                                                            name="comonth" >
                                                             <option value="">Select
                                                             </option>
                                                         </select>
@@ -446,7 +460,7 @@
                                                         
                                                             <select required id="cyear" class="form-select form-select "
                                                             data-control="select2" data-placeholder="Select an option"
-                                                            name="StateID" required>
+                                                            name="coyear" >
                                                             <option value="">Select
                                                             </option>
                                                         </select>
@@ -459,12 +473,12 @@
                                                     <div class="col-md-12 mt-3">
                                                         <label class=" required form-label fw-bolder font-weight-bolder fs-4 "
                                                         >
-                                                        Checkout Date: </label>
+                                                        Time: </label>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div>
                                                         
-                                                            <select required id="cday" class="form-select form-select "
+                                                            <select required id="hour" class="form-select form-select "
                                                                 data-control="select2" data-placeholder="Select an option"
                                                                 name="StateID" required>
                                                                 <option value="">Select
@@ -475,7 +489,7 @@
                                                     <div class="col-md-4">
                                                         <div>
                                                         
-                                                            <select required id="cmonth" class="form-select form-select "
+                                                            <select required id="min" class="form-select form-select "
                                                             data-control="select2" data-placeholder="Select an option"
                                                             name="StateID" required>
                                                             <option value="">Select
@@ -486,7 +500,7 @@
                                                     <div class="col-md-4">
                                                         <div>
                                                         
-                                                            <select required id="cyear" class="form-select form-select "
+                                                            <select required id="ap" class="form-select form-select "
                                                             data-control="select2" data-placeholder="Select an option"
                                                             name="StateID" required>
                                                             <option value="">Select
@@ -496,34 +510,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 my-4">
-                                                <div>
-                                                    <label class=" required fw-bolder form-label  font-weight-bolder fs-4 "
-                                                       >Call Permissions:</label>
-                                                        
-                                                    <select required id="stateDropdownaa" class="form-select form-select "
-                                                        data-control="select2" data-placeholder="Select an option"
-                                                        name="StateID" required>
-                                                        <option value="">Select
-                                                        </option>
-                                                        <option value="1001">1001</option>
-                                                        <option value="1002">1002</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 my-4">
-                                                <div>
-                                                    <label class=" required form-label fw-bolder fs-4  font-weight-bolder "
-                                                        >Do Not Disturb: :</label>
-                                                    <select id="stateDropdown" class="form-select form-select "
-                                                        data-control="select2" data-placeholder="Select an option"
-                                                        name="StateID" required>
-                                                        <option value="">Select
-                                                        </option>
-                                                        <option value=""></option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="col-md-12 my-5 pt-5 text-center">
                                                 <div >
                                                     <div class="row">
@@ -531,7 +518,7 @@
                                                             <input type="hidden" name="PlumberID"
                                                                 class="form-control mb-2" value="">
                                                             <button type="submit" class="btn btn-success btn-lg fs-2 fw-boldest" name=""
-                                                                value="save">Click To Check in</button>
+                                                                value="save">Click To Set</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -592,6 +579,7 @@
     <!--end::Page Vendors Javascript-->
     <!--begin::Page Custom Javascript(used by this page)-->
     <script src='assets/js/widgets.bundle.js'></script>
+    <script src='assets/js/custom.js'></script>
     <script src='assets/js/custom/widgets.js'></script>
     <script src='assets/js/custom/apps/chat/chat.js'></script>
     <script src='assets/js/custom/utilities/modals/upgrade-plan.js'></script>

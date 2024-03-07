@@ -385,7 +385,7 @@
 
                 <div id="kt_content_container" class="container-xxl min-h-xxl-650px">
 
-                    <form action="plumberaddedit.php" method="post" enctype="multipart/form-data">
+                    <form id="CheckoutGuest">
                         <!-- main cards -->
                         <div class="card card-flush shadow-sm ">
                             <div class="card-header py-0">
@@ -410,16 +410,13 @@
                                                 <div >
                                                     <div class="row">
                                                         <div class="col-md-6 ">
-                                                            <input type="hidden" name="PlumberID"
-                                                                class="form-control mb-2" value="">
-                                                            <button type="submit" class="btn btn-success btn-lg fs-2 fw-boldest" name=""
-                                                                value="save">Click To Check in</button>
-                                                        </div>
+                                                            <input type="submit"
+                                                                class="btn btn-success btn-lg fs-2 fw-boldest"
+                                                                value="Click To Checkout" />
                                                         <div class="col-md-6 ">
-                                                            <input type="hidden" name="PlumberID"
-                                                                class="form-control mb-2" value="">
-                                                            <button type="submit" class="btn btn-success btn-lg fs-2 fw-boldest" name=""
-                                                                value="save">Click To Clear Any Wakeup Calls</button>
+                                                                <input type="button"
+                                                                class="btn btn-success btn-lg fs-2 fw-boldest"
+                                                                value="Click To Clear Any Wakeup Calls" />
                                                         </div>
                                                     </div>
                                                 </div>

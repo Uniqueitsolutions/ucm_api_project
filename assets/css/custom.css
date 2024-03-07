@@ -33,15 +33,16 @@
     font-size:15px;
 }
 
-.menu-item .active .menu-icon .sv .dark{
-    display: none !important; 
-}
-.menu-item .menu-link .menu-icon .sv .dark{
-    display: block !important; 
-}
-.menu-item .active .menu-icon .sv .light{
-    display: block !important; 
-}
-.menu-item .menu-link .menu-icon .sv .light{
-    display: none !important; 
+#livetime{
+    color: #181c32;
+    border: 2px solid #181c32;
+    margin-top: 13px;
+    padding: 4px;
+    background-color: #fdf3ff;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 17px;
+    border-radius: 5px;
 }

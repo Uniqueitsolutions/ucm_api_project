@@ -392,7 +392,7 @@
                                 <h3 class="card-title fw-bolder">
                                     <img src="assets/images/fa-icon/check-in.png" class="w-25px" />
                                     &nbsp;&nbsp;
-                                    Checkin Guest</h3>
+                                    Modify DND & Long Distance Settings</h3>
                             </div>
                             <div class="card-body py-1 font-weight-bolder">
                                 <div class="container">
@@ -412,114 +412,33 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 my-4">
-                                                <div class="row">
-                                                    <div class="col-md-12 mt-3">
-                                                        <label class=" required form-label fw-bolder font-weight-bolder fs-4 "
-                                                        >Checkin Date: </label>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div>
-                                                        
-                                                            <select required id="cday" class="form-select form-select "
-                                                                data-control="select2" data-placeholder="Select an option"
-                                                                name="StateID" required>
-                                                                <option value="">Select
-                                                                </option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div>
-                                                        
-                                                            <select required id="cmonth" class="form-select form-select "
-                                                            data-control="select2" data-placeholder="Select an option"
-                                                            name="StateID" required>
-                                                            <option value="">Select
-                                                            </option>
-                                                        </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div>
-                                                        
-                                                            <select required id="cyear" class="form-select form-select "
-                                                            data-control="select2" data-placeholder="Select an option"
-                                                            name="StateID" required>
-                                                            <option value="">Select
-                                                            </option>
-                                                        </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>                                        
-                                            <div class="col-md-6 my-4">
-                                                <div class="row">
-                                                    <div class="col-md-12 mt-3">
-                                                        <label class=" required form-label fw-bolder font-weight-bolder fs-4 "
-                                                        >
-                                                        Checkout Date: </label>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div>
-                                                        
-                                                            <select required id="cday" class="form-select form-select "
-                                                                data-control="select2" data-placeholder="Select an option"
-                                                                name="StateID" required>
-                                                                <option value="">Select
-                                                                </option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div>
-                                                        
-                                                            <select required id="cmonth" class="form-select form-select "
-                                                            data-control="select2" data-placeholder="Select an option"
-                                                            name="StateID" required>
-                                                            <option value="">Select
-                                                            </option>
-                                                        </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div>
-                                                        
-                                                            <select required id="cyear" class="form-select form-select "
-                                                            data-control="select2" data-placeholder="Select an option"
-                                                            name="StateID" required>
-                                                            <option value="">Select
-                                                            </option>
-                                                        </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div class="col-md-12 my-4">
                                                 <div>
-                                                    <label class=" required fw-bolder form-label  font-weight-bolder fs-4 "
-                                                       >Call Permissions:</label>
-                                                        
-                                                    <select required id="stateDropdownaa" class="form-select form-select "
+                                                    <label class=" required form-label fw-bolder font-weight-bolder  fs-4 "
+                                                        >Call Permissions:</label>
+                                                    <select required id="CallPermissions" class="form-select form-select "
                                                         data-control="select2" data-placeholder="Select an option"
-                                                        name="StateID" required>
-                                                        <option value="">Select
-                                                        </option>
-                                                        <option value="1001">1001</option>
-                                                        <option value="1002">1002</option>
+                                                        name="CallPermissions" required>
+                                                       
+                                                        <option value="1">Internal</option>
+                                                        <option value="2">Local</option>
+                                                        <option value="3">Long Distance</option>
+                                                        <option value="4">International</option>
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12 my-4">
                                                 <div>
-                                                    <label class=" required form-label fw-bolder fs-4  font-weight-bolder "
-                                                        >Do Not Disturb: :</label>
-                                                    <select id="stateDropdown" class="form-select form-select "
+                                                    <label class=" required form-label fw-bolder font-weight-bolder  fs-4 "
+                                                        >Do Not Disturb:</label>
+                                                    <select required id="DoNotDisturb" class="form-select form-select "
                                                         data-control="select2" data-placeholder="Select an option"
-                                                        name="StateID" required>
-                                                        <option value="">Select
-                                                        </option>
-                                                        <option value=""></option>
+                                                        name="DoNotDisturb" required>
+                                                       
+                                                        <option value="no">Off</option>
+                                                        <option value="yes">On</option>
                                                     </select>
                                                 </div>
                                             </div>
