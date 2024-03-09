@@ -6,6 +6,7 @@ document.write(
     '<script src="assets/js/widgets.bundle.js"></script>'+
     '<script src="assets/js/custom/widgets.js"></script>'+
     '<script src="assets/js/custom.js"></script>'+
+    '<script src="assets/js/api.js"></script>'+
     '<script src="assets/js/custom/apps/chat/chat.js"></script>'+
     '<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>'+
     '<script src="assets/js/custom/utilities/modals/create-app.js"></script>'+
