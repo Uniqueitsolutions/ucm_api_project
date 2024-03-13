@@ -50,7 +50,81 @@ function populateDateDropdowns() {
 window.onload = populateDateDropdowns;
 
 $(document).ready(function () {
-    
+
+    $('.menu-link').hover(function() {
+        // Remove active class from all menu links
+        //$('.menu-link').removeClass('active');
+        // Add active class to the clicked menu link
+        //$(this).addClass('active');
+
+        // Toggle between light and dark images based on active class
+        if ($(this).hasClass('active')) {
+            $(this).find('.icon-image.light').hide();
+            $(this).find('.icon-image.dark').show();
+        } else {
+            $(this).find('.icon-image.light').show();
+            $(this).find('.icon-image.dark').hide();
+        }
+    },
+    function() {
+        // Remove active class from all menu links
+        //$('.menu-link').removeClass('active');
+        // Add active class to the clicked menu link
+        //$(this).addClass('active');
+
+        // Toggle between light and dark images based on active class
+        if ($(this).hasClass('active')) {
+            $(this).find('.icon-image.light').show();
+            $(this).find('.icon-image.dark').hide();
+        } else {
+            $(this).find('.icon-image.light').hide();
+            $(this).find('.icon-image.dark').show();
+        }
+    }
+    );
+
+    $('.menu-link').each(function() {
+        if ($(this).hasClass('active')) {
+            $(this).find('.icon-image.light').show();
+            $(this).find('.icon-image.dark').hide();
+        } else {
+            $(this).find('.icon-image.light').hide();
+            $(this).find('.icon-image.dark').show();
+        }
+    });
+
+
+      // Function to update date and time every second
+      function updateDateTime() {
+        var now = new Date();
+        var date = now.getDate();
+        var month = now.toLocaleDateString('en-US', { month: 'long' });
+        var year = now.getFullYear();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        // Format date, month, and year
+        var formattedDate = '<span style="color: #0f3f6f;">' + date + '</span>';
+        var formattedMonth = '<span style="color: #0f3f6f;">' + month + '</span>';
+        var formattedYear = '<span style="color: #0f3f6f;">' + year + '</span>';
+
+        // Format hours, minutes, and seconds
+        var formattedTime = '<span style="color: #0f3f6f;">' + hours + '</span>' + ':' +
+                            '<span style="color: #0f3f6f;">' + minutes + '</span>' + ':' +
+                            '<span style="color: #0f3f6f;">' + seconds + '</span>';
+
+        // Set the text content with formatted date, month, year, hours, minutes, and seconds
+        $('#livetime').html(' ' + formattedDate + ' ' + formattedMonth + ' ' + formattedYear +
+                            ', ' + formattedTime);
+    }
+
+    // Call the updateDateTime function initially
+    updateDateTime();
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
     // Input field validation for 3 characters
     $('#room').on('input', function() {
         var inputValue = $(this).val();
